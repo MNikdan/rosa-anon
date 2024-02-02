@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: llm-foundry
+Version: 0.2.0
+Summary: LLM Foundry
+Home-page: https://github.com/mosaicml/llm-foundry/
+Author: MosaicML
+Author-email: team@mosaicml.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: mosaicml[libcloud,mlflow,wandb]<0.16,>=0.15.0
+Requires-Dist: accelerate<0.21,>=0.20
+Requires-Dist: transformers<4.32,>=4.31
+Requires-Dist: mosaicml-streaming<0.6,>=0.5.1
+Requires-Dist: torch<=2.0.1,>=1.13.1
+Requires-Dist: datasets==2.10.1
+Requires-Dist: sentencepiece==0.1.97
+Requires-Dist: einops==0.5.0
+Requires-Dist: omegaconf<3,>=2.2.3
+Requires-Dist: slack-sdk<4
+Requires-Dist: mosaicml-cli<1,>=0.3
+Requires-Dist: onnx==1.14.0
+Requires-Dist: onnxruntime==1.15.1
+Requires-Dist: cmake<=3.26.3,>=3.25.0
+Provides-Extra: dev
+Requires-Dist: pre-commit<3,>=2.18.1; extra == "dev"
+Requires-Dist: pytest<8,>=7.2.1; extra == "dev"
+Requires-Dist: pytest_codeblocks<0.17,>=0.16.1; extra == "dev"
+Requires-Dist: pytest-cov<5,>=4; extra == "dev"
+Requires-Dist: pyright==1.1.256; extra == "dev"
+Requires-Dist: toml<0.11,>=0.10.2; extra == "dev"
+Requires-Dist: packaging<23,>=21; extra == "dev"
+Requires-Dist: hf_transfer==0.1.3; extra == "dev"
+Provides-Extra: tensorboard
+Requires-Dist: mosaicml[tensorboard]<0.16,>=0.15.0; extra == "tensorboard"
+Provides-Extra: gpu
+Requires-Dist: flash-attn==v1.0.3.post0; extra == "gpu"
+Requires-Dist: xentropy-cuda-lib@ git+https://github.com/HazyResearch/flash-attention.git@v1.0.3#subdirectory=csrc/xentropy ; extra == "gpu"
+Provides-Extra: peft
+Requires-Dist: loralib==0.1.1; extra == "peft"
+Requires-Dist: bitsandbytes==0.39.1; extra == "peft"
+Requires-Dist: scipy<=1.11.0,>=1.10.0; extra == "peft"
+Requires-Dist: peft==0.4.0; extra == "peft"
+Provides-Extra: all
+Requires-Dist: bitsandbytes==0.39.1; extra == "all"
+Requires-Dist: flash-attn==v1.0.3.post0; extra == "all"
+Requires-Dist: toml<0.11,>=0.10.2; extra == "all"
+Requires-Dist: hf_transfer==0.1.3; extra == "all"
+Requires-Dist: loralib==0.1.1; extra == "all"
+Requires-Dist: peft==0.4.0; extra == "all"
+Requires-Dist: xentropy-cuda-lib@ git+https://github.com/HazyResearch/flash-attention.git@v1.0.3#subdirectory=csrc/xentropy ; extra == "all"
+Requires-Dist: pyright==1.1.256; extra == "all"
+Requires-Dist: scipy<=1.11.0,>=1.10.0; extra == "all"
+Requires-Dist: pytest_codeblocks<0.17,>=0.16.1; extra == "all"
+Requires-Dist: pytest<8,>=7.2.1; extra == "all"
+Requires-Dist: pytest-cov<5,>=4; extra == "all"
+Requires-Dist: packaging<23,>=21; extra == "all"
+Requires-Dist: mosaicml[tensorboard]<0.16,>=0.15.0; extra == "all"
+Requires-Dist: pre-commit<3,>=2.18.1; extra == "all"
+
+A fork of the llm-foundry (by MosaicML) library, which includes RoSA experiments.
